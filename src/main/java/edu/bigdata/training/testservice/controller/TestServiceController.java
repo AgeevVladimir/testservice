@@ -32,7 +32,7 @@ public class TestServiceController {
         return new ResponseEntity<>(personEntity, HttpStatus.OK);
     }
 
-    @GetMapping(path = {"/get/all"}, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = {"/all"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<PersonEntity>> getAll() {
         List<PersonEntity> personEntities = testBusinessLogicService.processGetAll();
         return new ResponseEntity<>(personEntities, HttpStatus.OK);
